@@ -1,177 +1,486 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Агентство недвижимости «Метражи» | Ваш надежный партнер</title>
-    <style>
-        /* Премиальный темный минимализм Apple */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        body {
-            background-color: #000000; /* Чистый черный фон */
-            color: #f5f5f7;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 24px;
-        }
+  <title>Агентство недвижимости Метражи Калуга</title>
 
-        .portfolio-card {
-            background-color: #1c1c1e; /* Глубокий темно-серый цвет карточки */
-            border: 1px solid #2c2c2e;
-            border-radius: 20px;
-            padding: 48px 40px;
-            max-width: 500px;
-            width: 100%;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
-            text-align: center;
-        }
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        .profile-icon {
-            width: 88px;
-            height: 88px;
-            background: linear-gradient(135deg, #007aff, #00c6ff);
-            border-radius: 50%;
-            margin: 0 auto 24px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 36px;
-            color: #ffffff;
-            font-weight: 600;
-            box-shadow: 0 8px 16px rgba(0, 122, 255, 0.3);
-        }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f5f7;
+      color: #1c1c1c;
+    }
 
-        h1 {
-            font-size: 26px;
-            font-weight: 700;
-            color: #ffffff;
-            margin-bottom: 6px;
-            letter-spacing: -0.5px;
-        }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
-        .tagline {
-            font-size: 14px;
-            color: #0a84ff; /* Синий акцент */
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            margin-bottom: 28px;
-            font-weight: 600;
-        }
+    /* Верхняя шапка */
+    .cover {
+      height: 300px;
+      background:
+        linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.45)),
+        url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80")
+        center/cover;
+      position: relative;
+    }
 
-        .about-text {
-            font-size: 15px;
-            color: #aeaeb2;
-            line-height: 1.6;
-            margin-bottom: 32px;
-            text-align: left;
-            background-color: #2c2c2e;
-            padding: 16px;
-            border-radius: 12px;
-            border-left: 4px solid #0a84ff;
-        }
+    /* Основной контейнер */
+    .container {
+      width: min(1100px, 92%);
+      margin: 0 auto;
+    }
 
-        .section-title {
-            font-size: 12px;
-            color: #8e8e93;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 14px;
-            text-align: left;
-            font-weight: 600;
-        }
+    /* Карточка профиля */
+    .profile {
+      background: white;
+      border-radius: 22px;
+      margin-top: -70px;
+      position: relative;
+      padding: 30px;
+      box-shadow: 0 10px 35px rgba(0,0,0,.12);
+    }
 
-        .skills-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 36px;
-        }
+    .profile-top {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
 
-        .skill-item {
-            background-color: #2c2c2e;
-            color: #f5f5f7;
-            padding: 8px 14px;
-            border-radius: 20px;
-            font-size: 13px;
-            font-weight: 500;
-        }
+    .logo {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      border: 6px solid white;
+      background: linear-gradient(135deg, #1c6bff, #5b9cff);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 34px;
+      font-weight: 800;
+      box-shadow: 0 5px 20px rgba(0,0,0,.2);
+      flex-shrink: 0;
+    }
 
-        .contact-buttons {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
+    .profile-info h1 {
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
 
-        .action-button {
-            display: block;
-            background-color: #007aff;
-            color: #ffffff;
-            text-decoration: none;
-            padding: 16px;
-            border-radius: 12px;
-            font-weight: 600;
-            font-size: 15px;
-            transition: background-color 0.15s ease;
-        }
+    .profile-info p {
+      color: #666;
+      font-size: 17px;
+      line-height: 1.5;
+    }
 
-        .action-button:hover {
-            background-color: #0062cc;
-        }
+    .verified {
+      display: inline-block;
+      margin-left: 7px;
+      color: #1677ff;
+      font-size: 18px;
+    }
 
-        .action-button.secondary {
-            background-color: transparent;
-            border: 1px solid #3a3a3c;
-            color: #aeaeb2;
-        }
+    /* Кнопки */
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 25px;
+    }
 
-        .action-button.secondary:hover {
-            background-color: #2c2c2e;
-            color: #ffffff;
-            border-color: #48484a;
-        }
-    </style>
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 21px;
+      border-radius: 12px;
+      font-weight: 700;
+      transition: .2s;
+      border: none;
+      cursor: pointer;
+      font-size: 15px;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 7px 18px rgba(0,0,0,.12);
+    }
+
+    .telegram {
+      background: #229ed9;
+      color: white;
+    }
+
+    .phone {
+      background: #1e9b55;
+      color: white;
+    }
+
+    .website {
+      background: #222;
+      color: white;
+    }
+
+    /* Контент */
+    .content {
+      margin-top: 35px;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 25px;
+      padding-bottom: 50px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 20px;
+      padding: 28px;
+      box-shadow: 0 7px 25px rgba(0,0,0,.07);
+    }
+
+    .card h2 {
+      font-size: 23px;
+      margin-bottom: 15px;
+    }
+
+    .card p {
+      color: #666;
+      line-height: 1.65;
+    }
+
+    /* Услуги */
+    .services {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-top: 20px;
+    }
+
+    .service {
+      background: #f6f8fb;
+      padding: 18px;
+      border-radius: 15px;
+      font-weight: 600;
+    }
+
+    .service span {
+      display: block;
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    /* Правая колонка */
+    .contacts {
+      display: flex;
+      flex-direction: column;
+      gap: 13px;
+      margin-top: 15px;
+    }
+
+    .contact {
+      background: #f6f8fb;
+      padding: 15px;
+      border-radius: 12px;
+    }
+
+    .contact small {
+      display: block;
+      color: #888;
+      margin-bottom: 5px;
+    }
+
+    .contact strong {
+      font-size: 16px;
+    }
+
+    /* Фото */
+    .photo {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 15px;
+      margin-top: 20px;
+    }
+
+    /* Футер */
+    footer {
+      background: #181818;
+      color: #aaa;
+      text-align: center;
+      padding: 25px;
+      font-size: 14px;
+    }
+
+    footer strong {
+      color: white;
+    }
+
+    /* Мобильная версия */
+    @media (max-width: 750px) {
+
+      .cover {
+        height: 210px;
+      }
+
+      .profile {
+        margin-top: -45px;
+        padding: 22px;
+        border-radius: 18px;
+      }
+
+      .profile-top {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .logo {
+        width: 100px;
+        height: 100px;
+        font-size: 28px;
+      }
+
+      .profile-info h1 {
+        font-size: 25px;
+      }
+
+      .profile-info p {
+        font-size: 15px;
+      }
+
+      .buttons {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .content {
+        grid-template-columns: 1fr;
+        margin-top: 20px;
+      }
+
+      .services {
+        grid-template-columns: 1fr;
+      }
+
+      .card {
+        padding: 22px;
+      }
+
+      .photo {
+        height: 190px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-    <div class="portfolio-card">
-        <!-- Иконка профиля (первая буква названия) -->
-        <div class="profile-icon">М</div>
-        
-        <!-- Название компании -->
-        <h1>Метражи</h1>
-        <div class="tagline">Агентство недвижимости</div>
-        
-        <!-- Описание услуг компании -->
-        <p class="about-text">
-            Помогаем быстро, безопасно и выгодно решать любые вопросы с недвижимостью. Профессиональное сопровождение сделок купли-продажи, аренда, подбор жилой и коммерческой недвижимости, а также экспертная юридическая поддержка.
-        </p>
+  <!-- Большая картинка-шапка -->
+  <div class="cover"></div>
 
-        <div class="section-title">Наши услуги</div>
-        <div class="skills-grid">
-            <span class="skill-item">Покупка и продажа</span>
-            <span class="skill-item">Аренда жилья</span>
-            <span class="skill-item">Оценка объектов</span>
-            <span class="skill-item">Юридическая чистота</span>
-            <span class="skill-item">Ипотечный брокеридж</span>
+  <main class="container">
+
+    <!-- Профиль -->
+    <section class="profile">
+
+      <div class="profile-top">
+
+        <!-- Логотип -->
+        <div class="logo">
+          М
         </div>
 
-        <div class="section-title">Связаться со специалистом</div>
-        <div class="contact-buttons">
-            <!-- Сюда вставьте ссылку на ваш рабочий Telegram-аккаунт или группу вместо слова "ссылка" -->
-            <a href="ссылка" target="_blank" class="action-button">Написать в Telegram</a>
-            
-            <!-- Замените номер телефона в двух местах ниже на ваш реальный номер -->
-            <a href="tel:+7 (915) 892-07-00" class="action-button secondary">Позвонить: +7 (915) 892-07-00</a>
+        <div class="profile-info">
+          <h1>
+            Агентство недвижимости Метражи Калуга
+            <span class="verified">✓</span>
+          </h1>
+
+          <p>
+            Покупка • Продажа • Аренда • Сопровождение сделок
+          </p>
+
+          <p>
+            Помогаем найти квартиру, дом или коммерческую недвижимость
+            в Калуге и области.
+          </p>
         </div>
-    </div>
+
+      </div>
+
+      <!-- Кнопки -->
+      <div class="buttons">
+
+        <!-- Telegram -->
+        <a
+          class="btn telegram"
+          href="https://t.me/ВАШ_TELEGRAM"
+          target="_blank"
+        >
+          ✈ Telegram
+        </a>
+
+        <!-- Телефон -->
+        <a
+          class="btn phone"
+          href="tel:+70000000000"
+        >
+          ☎ Позвонить
+        </a>
+
+        <!-- Дополнительная кнопка -->
+        <a
+          class="btn website"
+          href="https://example.com"
+          target="_blank"
+        >
+          🌐 Наш сайт
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- Основная информация -->
+    <section class="content">
+
+      <div>
+
+        <!-- О компании -->
+        <div class="card">
+
+          <h2>О нас</h2>
+
+          <p>
+            «Метражи Калуга» — агентство недвижимости, которое помогает
+            быстро и безопасно решать вопросы с недвижимостью.
+            Подберём подходящий вариант, организуем просмотры,
+            поможем с документами и сопроводим сделку от начала до конца.
+          </p>
+
+          <img
+            class="photo"
+            src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1000&q=80"
+            alt="Недвижимость"
+          >
+
+        </div>
+
+
+        <!-- Услуги -->
+        <div class="card" style="margin-top:25px;">
+
+          <h2>Наши услуги</h2>
+
+          <div class="services">
+
+            <div class="service">
+              <span>🏠</span>
+              Покупка недвижимости
+            </div>
+
+            <div class="service">
+              <span>💰</span>
+              Продажа недвижимости
+            </div>
+
+            <div class="service">
+              <span>🔑</span>
+              Аренда квартир
+            </div>
+
+            <div class="service">
+              <span>📄</span>
+              Сопровождение сделок
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- Контакты -->
+      <aside>
+
+        <div class="card">
+
+          <h2>Контакты</h2>
+
+          <div class="contacts">
+
+            <div class="contact">
+              <small>Телефон</small>
+              <strong>+7 (000) 000-00-00</strong>
+            </div>
+
+            <div class="contact">
+              <small>Telegram</small>
+              <strong>@ВАШ_TELEGRAM</strong>
+            </div>
+
+            <div class="contact">
+              <small>Город</small>
+              <strong>Калуга и Калужская область</strong>
+            </div>
+
+            <div class="contact">
+              <small>График работы</small>
+              <strong>Ежедневно: 09:00–20:00</strong>
+            </div>
+
+          </div>
+
+          <div class="buttons">
+
+            <a
+              class="btn phone"
+              href="tel:+70000000000"
+              style="width:100%;"
+            >
+              ☎ Позвонить нам
+            </a>
+
+            <a
+              class="btn telegram"
+              href="https://t.me/ВАШ_TELEGRAM"
+              target="_blank"
+              style="width:100%;"
+            >
+              ✈ Написать в Telegram
+            </a>
+
+          </div>
+
+        </div>
+
+      </aside>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+    <strong>Агентство недвижимости «Метражи Калуга»</strong><br>
+    © 2026 Все права защищены
+  </footer>
 
 </body>
 </html>
+         
+           
